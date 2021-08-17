@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// criando uma para um grupo de recursos específico
+Route::resource('coronas','CoronaController');
