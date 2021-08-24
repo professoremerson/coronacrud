@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Corona;
 use Illuminate\Http\Request;
 
 class CoronaController extends Controller
@@ -50,7 +51,7 @@ class CoronaController extends Controller
         // da persistência dos dados validados 
         $show = Corona::create($validatedData);
         // redirecionando para o diretório raiz (index)
-        return redirect('/coronas')->with('success', 
+        return redirect('/crud')->with('success', 
         'Dados de Corona adicionado com sucesso!');
     }
 
@@ -106,7 +107,7 @@ class CoronaController extends Controller
         // da persistência (atualização) dos dados validados 
         Corona::whereId($id)->update($validatedData);
         // redirecionando para o diretório raiz (index)
-        return redirect('/coronas')->with('success', 
+        return redirect('/crud')->with('success', 
         'Dados de Corona atualizado com sucesso!');
     }
 
@@ -123,7 +124,7 @@ class CoronaController extends Controller
         // realizando a exclusão
         $coronaCase->delete();
         // redirecionando para o diretório raiz (index)
-        return redirect('/coronas')->with('success', 
+        return redirect('/crud')->with('success', 
         'Dados de Corona removido com sucesso!');
     }
 }

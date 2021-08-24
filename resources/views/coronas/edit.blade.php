@@ -16,7 +16,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
                         <span>@lang('Editar (Corona CRUD Laravel)')</span>
-                        <a href="{{ url('coronas') }}" class="btn-info btn-sm">
+                        <a href="{{ url('crud') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -28,21 +28,21 @@
                     </div>
                     @endif
 
-                    {!! Form::open(['action' => ['CoronaController@update',$coronacase->id], 'method' => 'PUT'])!!}
+                    {!! Form::open(['action' => ['CoronaController@update',$coronaCase->id], 'method' => 'PUT'])!!}
 
                     <div class="form-group">
                         {!! Form::label(__('Nome do País:')) !!}
-                        {!! Form::text("country_name", $coronacase->country_name ,["class"=>"form-control","required"=>"required"]) !!}
+                        {!! Form::text("country_name", $coronaCase->country_name ,["class"=>"form-control","required"=>"required"]) !!}
                     </div>
 
                     <div class="form-group">
                         {!! Form::label(__('Total de Casos:')) !!}
-                        {!! Form::text("symptoms", $coronacase->symptoms ,["id" => "symptoms", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::text("symptoms", $coronaCase->symptoms ,["id" => "symptoms", "class"=>"form-control mmss","required"=>"required"]) !!}
                     </div>
 
                     <div class="form-group">
                         {!! Form::label(__('Total de Mortes:')) !!}
-                        {!! Form::text("cases", $coronacase->cases ,["id" => "cases", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::text("cases", $coronaCase->cases ,["id" => "cases", "class"=>"form-control mmss","required"=>"required"]) !!}
                     </div>
 
                     <div class="well well-sm clearfix">

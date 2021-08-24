@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 // criando uma para um grupo de recursos específico
-Route::resource('coronas','CoronaController');
+Route::resource('crud','CoronaController');

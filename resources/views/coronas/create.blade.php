@@ -16,7 +16,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
                         <span>@lang('Criar (Corona CRUD Laravel)')</span>
-                        <a href="{{ url('coronas') }}" class="btn-info btn-sm">
+                        <a href="{{ url('crud') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
