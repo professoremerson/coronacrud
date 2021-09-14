@@ -59,7 +59,7 @@
                                     <form action="{{ route('pais.destroy', $pais->id)}}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                        <button class="btn btn-danger btn-sm" type="submit">Apagar</button>
                                     </form>
                                 </td>
                             </tr>
