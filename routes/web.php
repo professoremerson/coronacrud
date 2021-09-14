@@ -17,5 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// criando uma para um grupo de recursos específico
+// criando uma rota para um grupo de recursos específico
 Route::resource('crud','CoronaController');
+
+// criando uma rota para o recurso 'pais'
+Route::resource('pais','PaisController');
