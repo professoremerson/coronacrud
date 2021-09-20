@@ -16,7 +16,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
                         <span>@lang('Criar (Corona CRUD Laravel)')</span>
-                        <a href="{{ url('crud') }}" class="btn-info btn-sm">
+                        <a href="{{ url('cases') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -37,12 +37,12 @@
 
                     <div class="form-group">
                         {!! Form::label(__('Total de Casos:')) !!}
-                        {!! Form::text("symptoms", null ,["id" => "symptoms", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::text("symptoms", null ,["class"=>"form-control mmss","required"=>"required"]) !!}
                     </div>
 
                     <div class="form-group">
                         {!! Form::label(__('Total de Mortes:')) !!}
-                        {!! Form::text("cases", null ,["id" => "cases", "class"=>"form-control mmss","required"=>"required"]) !!}
+                        {!! Form::text("cases", null ,["class"=>"form-control mmss","required"=>"required"]) !!}
                     </div>
 
                     <div class="well well-sm clearfix">

@@ -25,7 +25,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
                         <span><span class="text-info">{{$coronaCase->country_name}}</span>: (@lang('Corona CRUD Laravel'))</span>
-                        <a href="{{ url('crud') }}" class="btn-info btn-sm">
+                        <a href="{{ url('cases') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>

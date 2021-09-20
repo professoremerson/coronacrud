@@ -16,7 +16,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
                         <span>@lang('Corona (CRUD Laravel)')</span>
-                        <a href="{{ url('crud/create') }}" class="btn-primary btn-sm">
+                        <a href="{{ url('cases/create') }}" class="btn-primary btn-sm">
                             <i class="fa fa-plus"></i> @lang('Criar Novo')
                         </a>
                     </div>
@@ -46,17 +46,17 @@
                                 <td>{{number_format($case->symptoms,0,",",".")}}</td>
                                 <td>{{number_format($case->cases,0,",",".")}}</td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <a href="{{ route('crud.show', $case->id)}}"
+                                    <a href="{{ route('cases.show', $case->id)}}"
                                         class="btn btn-info btn-sm">@lang('Abrir')
                                     </a>
                                 </td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <a href="{{ route('crud.edit', $case->id)}}"
+                                    <a href="{{ route('cases.edit', $case->id)}}"
                                         class="btn btn-primary btn-sm">@lang('Editar')
                                     </a>
                                 </td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <form action="{{ route('crud.destroy', $case->id)}}" method="post">
+                                    <form action="{{ route('cases.destroy', $case->id)}}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger btn-sm" type="submit">Delete</button>
