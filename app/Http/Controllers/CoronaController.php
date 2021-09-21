@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Corona;
+use App\Pais;
 use Illuminate\Http\Request;
 
 class CoronaController extends Controller
@@ -16,9 +17,11 @@ class CoronaController extends Controller
     {
         // obtendo todos os dados do banco
         $coronaCases = Corona::all();
+        // obtendo os dados dos países
+        $paises = Pais::pluck('nome_pais','id');
         // retornando a tela de visualização com os
         // objetos obtidos do banco
-        return view('coronas.index', compact('coronaCases'));
+        return view('coronas.index', compact('coronaCases','paises'));
     }
 
     /**
@@ -28,8 +31,10 @@ class CoronaController extends Controller
      */
     public function create()
     {
+        // obtendo os dados dos países
+        $paises = Pais::pluck('nome_pais','id');
         // exibindo a tela para cadastro
-        return view('coronas.create');
+        return view('coronas.create',compact('paises'));
     }
 
     /**
@@ -43,7 +48,7 @@ class CoronaController extends Controller
         // criando um objeto para testar/aplicar 
         // validações nos dados da requisição
         $validatedData = $request->validate([
-            'country_name' => 'required|max:255',
+            'country_id' => 'required|numeric',
             'symptoms' => 'required',
             'cases' => 'required|numeric',
         ]);
@@ -99,7 +104,7 @@ class CoronaController extends Controller
         // criando um objeto para testar/aplicar 
         // validações nos dados da requisição
         $validatedData = $request->validate([
-            'country_name' => 'required|max:255',
+            'country_id' => 'required|numeric',
             'symptoms' => 'required',
             'cases' => 'required|numeric',
         ]);

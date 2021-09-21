@@ -32,7 +32,7 @@
 
                     <div class="form-group">
                         {!! Form::label(__('Nome do País:')) !!}
-                        {!! Form::text("country_name", null ,["class"=>"form-control","required"=>"required"]) !!}
+                        {!! Form::select("country_id", $paises, null, ["class"=>"form-control","required"=>"required"]) !!}
                     </div>
 
                     <div class="form-group">

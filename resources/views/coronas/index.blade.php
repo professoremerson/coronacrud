@@ -42,7 +42,7 @@
                             @foreach($coronaCases as $case)
                             <tr>
                                 <td>{{$case->id}}</td>
-                                <td>{{$case->country_name}}</td>
+                                <td>{{$case->pais->nome_pais}}</td>
                                 <td>{{number_format($case->symptoms,0,",",".")}}</td>
                                 <td>{{number_format($case->cases,0,",",".")}}</td>
                                 <td class="text-center p-0 align-middle" width="70">
